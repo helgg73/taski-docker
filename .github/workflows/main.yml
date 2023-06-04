@@ -184,6 +184,7 @@ jobs:
         # которые нужно выполнить на сервере, 
         # с которым установлено соединение
         script: |
+          sudo docker image prune -f
           cd taski
           # Выполняет pull образов с DockerHub
           sudo docker compose -f docker-compose.production.yml pull
